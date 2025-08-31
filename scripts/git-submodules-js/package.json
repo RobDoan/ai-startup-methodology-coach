@@ -1,0 +1,35 @@
+{
+  "name": "git-submodules-cli",
+  "version": "1.0.0",
+  "description": "Git submodule workflow automation for AI Startup Methodology Coach",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "submodule-cli": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "init": "node src/commands/init-submodules.js",
+    "sync": "node src/commands/sync-submodules.js",
+    "new-feature": "node src/commands/new-feature.js",
+    "create-pr": "node src/commands/create-submodule-pr.js",
+    "parent-pr": "node src/commands/create-parent-pr.js",
+    "cleanup": "node src/commands/cleanup.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "execa": "^8.0.1",
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1",
+    "simple-git": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
